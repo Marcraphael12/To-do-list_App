@@ -1,0 +1,33 @@
+{
+  "name": "to-do-list_app",
+  "version": "1.0.0",
+  "description": "This project is a simple to do app that allows you to be organized with your task",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcraphael12/To-do-list_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcraphael12/To-do-list_App/issues"
+  },
+  "homepage": "https://github.com/Marcraphael12/To-do-list_App#readme",
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
