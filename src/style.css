@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.di {
+	display: flex;
+	justify-content: center;
+}
+
+.dc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.btm-bdr {
+	border-bottom: 1px solid rgb(168, 166, 166) !important;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: rgb(177, 177, 177);
+	padding: 50px 30px;
+}
+
+.container {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	justify-content: initial;
+	background: #fff;
+	box-shadow: 0 0 1px 3px rgb(109, 107, 107);
+}
+
+.refresher {
+	justify-content: space-between;
+	padding: 20px 15px;
+	width: 100%;
+	color: cadetblue;
+}
+
+.form {
+	width: 100%;
+	height: auto;
+}
+
+.fa,
+.fas {
+  color: rgba(41, 29, 14, 0.692);
+}
+
+.text-input {
+	width: 100%;
+	padding: 20px 15px;
+	border: none;
+	color: cadetblue;
+	outline: none;
+}
+
+.task-list {
+	width: 100%;
+	height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.task-container {
+	width: 100%;
+	justify-content: start;
+	padding: 20px 15px;
+}
+
+.task-container p {
+	margin-left: 15px;
+	margin-right: auto;
+	color: rgb(0, 136, 255);
+}
+
+.clear-button {
+	width: 100%;
+	border: 1px solid rgb(168, 166, 166);
+	padding: 20px 15px;
+	color: rgb(255, 0, 0);
+	transition: all 0.3s ease-in-out;
+}
+
+.clear-button:hover {
+	color: #fff;
+	background-color: red;
+}
