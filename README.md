@@ -1,8 +1,6 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Marc Raphael's Capstone project
-
 # To-do-list_App
 This project is a simple to do app that allows you to be organized with your dayly tasks
 
