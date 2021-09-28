@@ -8,8 +8,8 @@ export default function refresher() {
   const refresh = document.createElement('i');
   refresh.classList.add('fas', 'fa-sync');
 
-  topDiv.appendChild(text);
-  topDiv.appendChild(refresh);
+  refresherContainer.appendChild(text);
+  refresherContainer.appendChild(refresh);
 
-  return topDiv;
+  return refresherContainer;
 }
