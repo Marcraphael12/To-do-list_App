@@ -8,6 +8,7 @@ import clearButton from './clear-task.js';
 import Task from './task-adder';
 
 const ul = document.createElement('ul');
+ul.classList.add('task-list', 'dc');
 
 
 const container = document.querySelector('.container');
