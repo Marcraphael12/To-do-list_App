@@ -3,12 +3,9 @@ export default function form() {
   form.classList.add('form');
 
   const text = document.createElement('input');
-  text.classList.add('text-input');
+  text.classList.add('text-input', 'btm-bdr');
   text.type = 'text';
   text.placeholder = 'Add to your list...';
-
-  const ul = document.createElement('ul');
-  ul.classList.add('taskList');
 
   form.appendChild(text);
 
