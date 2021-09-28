@@ -1,6 +1,6 @@
 export default function refresher() {
   const refresherContainer = document.createElement('div');
-  refresherContainer.classList.add('refresher');
+  refresherContainer.classList.add('refresher', 'di', 'btm-bdr');
 
   const text = document.createElement('p');
   text.textContent = "Today's things to Do";
