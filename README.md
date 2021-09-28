@@ -32,7 +32,8 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
 - Download the repo, if you don't know how to do it, just [click here](https://github.com/Marcraphael12/To-do-list_App/archive/refs/heads/main.zip)!
-- Open the index file with your browser, and enjoy!
+- Open the ./src/index file with your browser, and enjoy!
+- Or in the folder, open a new terminal, run <code>npm start</code>. If you do'nt have npm installed, follow [this guide](https://webpack.js.org/guides/development/#using-webpack-dev-server)
 
 ### Install
 
