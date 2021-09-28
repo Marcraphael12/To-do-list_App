@@ -5,9 +5,10 @@ export default function newTask(task) {
 
 	const taskName = document.createElement('p');
 	taskName.className = 'task-name';
+	taskName.innerHTML = task.description;
 
 	const more = document.createElement('i');
-  dots.classList.add('fa', 'fa-ellipsis-v');
+  more.classList.add('fa', 'fa-ellipsis-v');
 
 	const taskContainer = document.createElement('li');
 	taskContainer.className = 'task-container';
