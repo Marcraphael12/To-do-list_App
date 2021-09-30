@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-  <title>Marc To-do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title>To Do List</title>
 </head>
-<body class="di">
-  <div class="container dc">
-    <h2 class="header btm-bdr di font">
-      <span>to day's to do</span>
-      <button type="button"><i class="fas fa-sync-alt"></i></button>
-    </h2>
-
-    <form class="form di btm-bdr" action="">
-      <input type="text" name="" class="input-text font" placeholder="Add to your list..." required>
-
-      <button type="submit" class="font add-button">↵</button>
-    </form>
-
-    <ul class="task-group btm-bdr">
-
+<body>
+  <div class="maindiv">
+    <ul class="mainList">
+      <li>
+        <ul class="repeatList">
+          <li class="firstItem">Today's To Do</li>
+          <li class="formItem">
+          <form id="addTodo">
+             <input type="text" id="todotitle" placeholder="Add to your list...">
+             <button type="submit" id="btn"> <i class="fa fa-arrow-down"></i></button>
+          </form>
+         </li>
+           
+        </ul>
+      </li>
+      <li>
+        <ul class="repeatList" id="showListItem">
+        </ul>
+      </li>
     </ul>
-
-    <div class="foot">
-      <button class="font clear-button di">
-        clear all completed
-      </button>
-    </div>
+    <button type="button" class="clearBtn" id="clearButton">Clear All Completed</button>
   </div>
 </body>
 </html>
