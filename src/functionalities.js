@@ -5,8 +5,14 @@ class TodoList {
 
   createTask(task) {
     this.TaskList.push(task);
-    localStrorage.setItem('Tasks', this.TaskList);
-    this.displayTask()
+    localStrorage.setItem('Tasks',JSON.stringify(this.TaskList));
+    this.displayTask();
+  }
+
+  removeTask() {
+    this.TaskList.filter((task) => task.index !== index);
+    localStrorage.setItem('Tasks',JSON.stringify(this.TaskList));
+    this.displayTask();
   }
 
   displayTask() {
@@ -46,23 +52,7 @@ class TodoList {
     theTask.appendChild(string);
     theTask.appendChild(taskMenu);
     theTask.appendChild(trash);
+
+    return theTask;
   }
-}
-
-
-
-createTask() {
-
-}
-
-saveTask() {
-
-}
-
-getTask() {
-
-}
-
-removeTask() {
-
 }
