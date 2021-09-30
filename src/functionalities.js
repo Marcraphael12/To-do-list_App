@@ -18,7 +18,34 @@ class TodoList {
 
   simpleTask() {
     const theTask = document.createElement('li');
-    theTask.classList.add('the-task', 'di', 'font');
+    theTask.classList.add('the-task', 'di', 'font', 'btm-bdr');
+
+    const checkBox = documen.createElement('input');
+    checkBox.value = false;
+
+    const string = document.createElement('p');
+    string.classList.add('font', 'di', 'task-name');
+
+    const taskMenu = document.createElement('button');
+    taskMenu.classList.add('font', 'task-menu');
+    taskMenu.innerHTML = `<i class="fas fa-ellipsis-v"></i>`;
+
+    const trash = document.createElement('button');
+    trash.classList.add('font', 'trash', 'dn');
+
+    taskMenu.addEventListener('over', () => {
+      taskMenu.classList.toogle('dn');
+      trash.classList.toogle('di');
+    });
+
+    trash.addEventListener('click', () => {
+      this.removeTask(task.index);
+    });
+
+    theTask.appendChild(checkBox);
+    theTask.appendChild(string);
+    theTask.appendChild(taskMenu);
+    theTask.appendChild(trash);
   }
 }
 
