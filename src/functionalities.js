@@ -1,4 +1,4 @@
-class TodoList {
+export default class Todo_List {
   constructor() {
     this.TaskList = [];
   }
