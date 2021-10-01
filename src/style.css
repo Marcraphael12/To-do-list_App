@@ -1,0 +1,67 @@
+body {
+  background: #bd7bbd;
+  font-style: normal;
+  color: rgb(255, 0, 170);
+}
+
+.wrapper {
+  width: 400px;
+  margin: 100px auto;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.task-title {
+  padding: 5px 10px;
+  font-size: 30px;
+}
+
+.input-list {
+  padding: 5px 10px;
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  outline: none;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border-bottom: 1px solid rgb(206, 95, 95);
+  padding: 10px 10px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.list-item > p {
+  margin: 0;
+}
+
+.index {
+  color: transparent;
+}
+
+.icon {
+  color: rgb(182, 0, 173);
+  margin: 0 0 0 auto;
+}
+
+.delete-all-task {
+  width: 100%;
+  border: none;
+  padding: 10px 0;
+  color: rgb(173, 0, 0);
+}
+
+.list-item.dragging {
+  opacity: 0.5;
+  background-color: rgb(255, 0, 234);
+}
+
+[contenteditable] {
+  outline: 0 solid transparent;
+}
