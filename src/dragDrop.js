@@ -20,6 +20,10 @@ export function dragLeave() {
   targetItem = null;
 }
 
+export function allowDrop(event) {
+  event.preventDefault();
+}
+
 export function drop(event) {
   event.preventDefault();
   targetItem = document.getElementById(event.target.id);
