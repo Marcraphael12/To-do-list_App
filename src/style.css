@@ -1,94 +1,125 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #1aa3ff;
 }
 
 .di {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .dc {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .btm-bdr {
-	border-bottom: 1px solid rgb(168, 166, 166) !important;
+  border-bottom: solid 1px  #f99;
 }
 
 body {
-	width: 100%;
-	height: 100vh;
-	background: rgb(177, 177, 177);
-	padding: 50px 30px;
+  background-color: #f99;
+  justify-content: center !important;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
 }
 
-.container {
-	width: 100%;
-	max-width: 500px;
-	height: auto;
-	justify-content: initial;
-	background: #fff;
-	box-shadow: 0 0 1px 3px rgb(109, 107, 107);
+button,
+i {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.refresher {
-	justify-content: space-between;
-	padding: 20px 15px;
-	width: 100%;
-	color: cadetblue;
+.myapp {
+  width: 100%;
+  max-width: 500px;
+  height: 90%;
+  background: white;
+}
+
+.header {
+  width: 100%;
+  height: 10%;
+  padding: 15px 20px;
+}
+
+.header h1 {
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .form {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: 10%;
+  padding: 0 20px;
 }
 
-.fa,
-.fas {
-  color: rgba(41, 29, 14, 0.692);
+.input {
+  width: 90%;
+  height: auto;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  background: none;
 }
 
-.text-input {
-	width: 100%;
-	padding: 20px 15px;
-	border: none;
-	color: cadetblue;
-	outline: none;
+.list {
+  width: 100%;
+  height: 70%;
+  padding: 15px 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.task-list {
-	width: 100%;
-	height: 300px;
-	overflow-y: auto;
-	overflow-x: hidden;
+.todo {
+  width: 100%;
+  height: auto;
 }
 
-.task-container {
-	width: 100%;
-	justify-content: start;
-	padding: 20px 15px;
+.todo-text {
+  width: 80%;
+  height: auto;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  background: none;
 }
 
-.task-container p {
-	margin-left: 15px;
-	margin-right: auto;
-	color: rgb(0, 136, 255);
+.checkbox {
+  width: 10%;
+  height: auto;
 }
 
-.clear-button {
-	width: 100%;
-	border: 1px solid rgb(168, 166, 166);
-	padding: 20px 15px;
-	color: rgb(255, 0, 0);
-	transition: all 0.3s ease-in-out;
+.completed {
+  text-decoration: line-through;
+  color: #f99;
 }
 
-.clear-button:hover {
-	color: #fff;
-	background-color: red;
+button:hover,
+i:hover {
+  color: #f99;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+}
+
+.clearbtn {
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+  justify-content: center;
+}
+
+.current-active {
+  opacity: 0;
 }

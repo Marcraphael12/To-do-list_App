@@ -6,11 +6,11 @@ module.exports = {
 
   entry: './src/index.js',
 
-	devServer: {
+  devServer: {
     static: './dist',
   },
 
-	plugins: [
+  plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
@@ -21,7 +21,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
-	module: {
+  module: {
     rules: [
       {
         test: /\.css$/i,

@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <title>Marc To-do List</title>
-</head>
-<body class="di">
-    <div class="container dc"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      crossorigin="anonymous"
+      rel="stylesheet">
+    <title>To do list</title>
+  </head>
+  <body class="di">
+    <main id="app" class="myapp dc">
+      <header class="header di btm-bdr">
+        <h1>Today's Things To Do</h1>
+        <i class="fas fa-sync-alt"></i>
+      </header>
+      <form class="form di btm-bdr" id="form">
+        <input type="text" id="input" placeholder="Add to your list..." autocomplete="off" class="input"
+        />
+        <button type="submit" title="update">
+          ↵
+        </button>
+      </form>
+      <ul id="list" class="list btm-bdr"></ul>
+      <footer class="footer">
+        <button class="clearbtn di" type="button" id="clear-btn">
+          Clear all completed
+        </button>
+      </footer>
+    </main>
+  </body>
 </html>

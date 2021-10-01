@@ -1,31 +1,96 @@
-import _ from 'lodash';
 import './style.css';
 
-import refresher from './refresher.js';
-import form from './form-inputs.js';
-import taskContainer from './new-task.js';
-import clearButton from './clear-task.js';
-import Task from './task-adder';
+// need drag and funct
+// drag
+// start
+// end
+// leave
+// drag enter
 
-const ul = document.createElement('ul');
-ul.classList.add('task-list', 'dc');
+import {
+  dragStart,
+  allowDrop,
+  dragEnd,
+  drop,
+  dragEnter,
+  dragLeave,
+} from './dragDrop.js';
 
+import updateStatus from './status.js';
 
-const container = document.querySelector('.container');
-container.appendChild(refresher());
-container.appendChild(form());
-container.appendChild(ul);
-container.appendChild(clearButton());
+const list = document.getElementById('list');
 
-const body = document.querySelector('body');
-body.appendChild(container);
+let todoList = [
+  {
+    description: 'Eat',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'Sleep',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Code',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Repeat',
+    completed: false,
+    index: 3,
+  },
+];
 
-const myTasks = [];
-myTasks.push(new Task('Eat', false, 0));
-myTasks.push(new Task('Sleep', false, 1));
-myTasks.push(new Task('Code', false, 2));
-myTasks.push(new Task('Repeat', false, 3));
+function renderList(arr) {
+  list.innerHTML = arr.map((item) => `<li class='flex-row todo di btm-bdr' draggable='true' id='${item.index}'>
+<input type='checkbox' class='checkbox' data-id='${item.index}'  ${item.completed ? 'checked' : ''}>
+<input type='text' value='${item.description}' data-index='${item.index}'draggable='false' class='todo-text ${item.completed ? 'completed' : ''}'>
+<i class='fas fa-ellipsis-v dots' data-id='${item.index}'></i>
+</li>`).join('');
 
-myTasks.forEach((task) => {
-  ul.appendChild(taskContainer(task));
+  list.addEventListener('dragenter', dragEnter);
+
+  document.querySelectorAll('.todo').forEach((t) => {
+    t.addEventListener('dragstart', dragStart);
+    t.addEventListener('dragend', dragEnd);
+    t.addEventListener('dragenter', dragEnter);
+    t.addEventListener('dragleave', dragLeave);
+    t.addEventListener('drop', drop);
+    t.addEventListener('dragover', allowDrop);
+  });
+
+  document.querySelectorAll('.todo-text').forEach((text) => {
+    text.addEventListener('focus', (event) => {
+      document.querySelectorAll('.todo').forEach((t) => {
+        t.style.backgroundColor = '#fff';
+      });
+      event.target.parentNode.style.backgroundColor = '#fea';
+    });
+    text.addEventListener('blur', () => {
+      document.querySelectorAll('.todo').forEach((t) => {
+        t.style.backgroundColor = '#fff';
+      });
+    });
+  });
+
+  const checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach((chbox) => {
+    chbox.addEventListener('change', updateStatus);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  // if todo list is !empty, get data from it and render
+  if (localStorage.getItem('TodoList')) {
+    todoList = JSON.parse(localStorage.getItem('TodoList'));
+  } else {
+    localStorage.setItem(
+      'TodoList',
+      JSON.stringify(todoList.sort((a, b) => +a.index - +b.index)),
+    );
+  }
+
+  renderList(todoList.sort((a, b) => +a.index - +b.index));
 });
