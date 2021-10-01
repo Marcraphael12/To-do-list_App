@@ -23,29 +23,29 @@ const list = document.getElementById('list');
 
 let todoList = [
   {
-    description: 'Have Breakfast',
+    description: 'Eat',
     completed: false,
     index: 0,
   },
   {
-    description: 'Grocery shopping',
+    description: 'Sleep',
     completed: false,
     index: 1,
   },
   {
-    description: 'Cleaning',
+    description: 'Code',
     completed: false,
     index: 2,
   },
   {
-    description: 'Feed the Cats',
+    description: 'Repeat',
     completed: false,
     index: 3,
   },
 ];
 
 function renderList(arr) {
-list.innerHTML = arr.map((item) => `<li class='flex-row todo' draggable='true' id='${item.index}'>
+list.innerHTML = arr.map((item) => `<li class='flex-row todo di btm-bdr' draggable='true' id='${item.index}'>
 <input type='checkbox' class='checkbox' data-id='${item.index}'  ${item.completed ? 'checked' : ''}>
 <input type='text' value='${item.description}' data-index='${item.index}'draggable='false' class='todo-text ${item.completed ? 'completed' : ''}'>
 <i class='fas fa-ellipsis-v dots' data-id='${item.index}'></i>
