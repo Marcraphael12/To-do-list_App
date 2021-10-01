@@ -81,3 +81,16 @@ const checkboxes = document.querySelectorAll('.checkbox');
     chbox.addEventListener('change', updateStatus);
   });
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('TodoList')) {
+    todoList = JSON.parse(localStorage.getItem('TodoList'));
+  } else {
+    localStorage.setItem(
+      'TodoList',
+      JSON.stringify(todoList.sort((a, b) => +a.index - +b.index)),
+    );
+  }
+
+  renderList(todoList.sort((a, b) => +a.index - +b.index));
+});
