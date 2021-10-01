@@ -43,3 +43,10 @@ let todoList = [
     index: 3,
   },
 ];
+
+function renderList(arr) {
+list.innerHTML = arr.map((item) => `<li class='flex-row todo' draggable='true' id='${item.index}'>
+<input type='checkbox' class='checkbox' data-id='${item.index}'  ${item.completed ? 'checked' : ''}>
+<input type='text' value='${item.description}' data-index='${item.index}'draggable='false' class='todo-text ${item.completed ? 'completed' : ''}'>
+<i class='fas fa-ellipsis-v dots' data-id='${item.index}'></i>
+</li>`,).join('');
