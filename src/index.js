@@ -83,9 +83,13 @@ const checkboxes = document.querySelectorAll('.checkbox');
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  // if todo list is !empty, get data from it and render
   if (localStorage.getItem('TodoList')) {
     todoList = JSON.parse(localStorage.getItem('TodoList'));
-  } else {
+  }
+
+  //else, save its current data
+  else {
     localStorage.setItem(
       'TodoList',
       JSON.stringify(todoList.sort((a, b) => +a.index - +b.index)),
