@@ -95,8 +95,8 @@ body {
 
 .list-item > p {
   margin-left: 10px;
-  color: #7300e6;
   text-transform: capitalize;
+    color: #7300e6;
 }
 
 .index {
