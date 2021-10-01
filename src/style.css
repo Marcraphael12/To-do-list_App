@@ -101,6 +101,10 @@ body {
 
 .index {
   color: #7300e6;
+  width: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .icon {
