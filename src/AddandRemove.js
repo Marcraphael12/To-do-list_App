@@ -58,7 +58,7 @@ class TaskList {
 
     this.savedList.forEach((task, i) => {
       const li = document.createElement('li');
-      li.className = 'list-item';
+      li.classList.add ('list-item', 'btm-bdr', 'di');
       li.draggable = 'true';
       li.addEventListener('dragstart', (e) => {
         dragAndDrop(e, i);
@@ -79,7 +79,7 @@ class TaskList {
       });
 
       const p = document.createElement('p');
-      const index = document.createElement('spand');
+      const index = document.createElement('span');
       index.className = 'index';
       const button = document.createElement('i');
       button.classList.add('fas', 'fa-ellipsis-v', 'icon');
@@ -99,9 +99,9 @@ class TaskList {
       p.innerHTML = task.description;
       index.innerHTML = task.index;
 
+			li.appendChild(index);
       li.appendChild(checkbox);
       li.appendChild(p);
-      li.appendChild(index);
       li.appendChild(button);
       this.ul.appendChild(li);
       this.ul.addEventListener('dragover', (e) => {
