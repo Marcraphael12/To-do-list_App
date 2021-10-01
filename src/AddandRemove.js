@@ -78,7 +78,7 @@ class TaskList {
         this.displayAllTask();
       });
 
-      const p = document.createElement('p');
+      const p = document.createElement('input');
       const index = document.createElement('span');
       index.className = 'index';
       const button = document.createElement('i');
@@ -96,7 +96,7 @@ class TaskList {
         this.edditTask(e, i);
       });
 
-      p.innerHTML = task.description;
+      p.value = task.description;
       index.innerHTML = task.index;
 
       li.appendChild(index);

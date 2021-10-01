@@ -93,10 +93,12 @@ body {
   color: #7300e6;
 }
 
-.list-item > p {
+.list-item > input {
   margin-left: 10px;
   text-transform: capitalize;
   color: #7300e6;
+  border: none;
+  outline: none;
 }
 
 .index {
