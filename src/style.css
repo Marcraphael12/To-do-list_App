@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  color:  #1aa3ff;
+  color: #1aa3ff;
 }
 
 .di {
@@ -20,18 +20,19 @@
 }
 
 .btm-bdr {
-  border-bottom: solid 1px  #ff9999;
+  border-bottom: solid 1px  #f99;
 }
 
 body {
-  background-color: #ff9999;
+  background-color: #f99;
   justify-content: center !important;
   width: 100%;
   height: 100vh;
   padding: 10px;
 }
 
-button, i {
+button,
+i {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -99,18 +100,18 @@ button, i {
 
 .completed {
   text-decoration: line-through;
-  color: #ff9999;
+  color: #f99;
 }
 
-button:hover, i:hover {
- color: #ff9999;
+button:hover,
+i:hover {
+  color: #f99;
 }
 
 .footer {
   width: 100%;
   height: 10%;
 }
-
 
 .clearbtn {
   width: 100%;

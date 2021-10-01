@@ -11,7 +11,6 @@ export function dragEnd() {
   current = null;
 }
 
-
 export function dragEnter(event) {
   event.preventDefault();
 }
