@@ -1,4 +1,3 @@
-
 import './style.css';
 
 import dragAndDrop from './dragDrop.js';
