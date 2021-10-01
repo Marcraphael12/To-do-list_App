@@ -61,3 +61,17 @@ list.addEventListener('dragenter', dragEnter);
     t.addEventListener('drop', drop);
     t.addEventListener('dragover', allowDrop);
 });
+
+document.querySelectorAll('.todo-text').forEach((text) => {
+  text.addEventListener('focus', (event) => {
+    document.querySelectorAll('.todo').forEach((t) => {
+      t.style.backgroundColor = '#fff';
+    });
+    event.target.parentNode.style.backgroundColor = '#fea';
+  });
+  text.addEventListener('blur', () => {
+    document.querySelectorAll('.todo').forEach((t) => {
+      t.style.backgroundColor = '#fff';
+    });
+  });
+});
