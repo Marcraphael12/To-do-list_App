@@ -58,7 +58,7 @@ class TaskList {
 
     this.savedList.forEach((task, i) => {
       const li = document.createElement('li');
-      li.classList.add ('list-item', 'btm-bdr', 'di');
+      li.classList.add('list-item', 'btm-bdr', 'di');
       li.draggable = 'true';
       li.addEventListener('dragstart', (e) => {
         dragAndDrop(e, i);
@@ -99,7 +99,7 @@ class TaskList {
       p.innerHTML = task.description;
       index.innerHTML = task.index;
 
-			li.appendChild(index);
+      li.appendChild(index);
       li.appendChild(checkbox);
       li.appendChild(p);
       li.appendChild(button);
