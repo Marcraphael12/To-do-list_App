@@ -75,3 +75,9 @@ document.querySelectorAll('.todo-text').forEach((text) => {
     });
   });
 });
+
+const checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach((chbox) => {
+    chbox.addEventListener('change', updateStatus);
+  });
+}
