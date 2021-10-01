@@ -1,67 +1,138 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.btm-bdr {
+  border-bottom: 1px solid #a64dff;
+}
+
+.di {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
-  background: #bd7bbd;
-  font-style: normal;
-  color: rgb(255, 0, 170);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top left, #a64dff, #7300e6);
 }
 
 .wrapper {
-  width: 400px;
-  margin: 100px auto;
-  background: #fff;
-  border-radius: 2px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 600px;
+  background: white;
+  justify-content: space-between;
+  border: solid 1px white;
+  padding: 15px 20px;
 }
 
 .task-title {
-  padding: 5px 10px;
-  font-size: 30px;
+  width: 100%;
+  height: 10%;
+  justify-content: start;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.form {
+  width: 100%;
+  height: 10%;
+  background: #7300e6;
 }
 
 .input-list {
-  padding: 5px 10px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
   border: none;
-  font-family: "Times New Roman", Times, serif;
-  font-style: italic;
+  background: none;
   outline: none;
+  font-weight: bold;
+}
+
+.task-list {
+  width: 100%;
+  height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 15px 20px;
 }
 
 .list-item {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  border-bottom: 1px solid rgb(206, 95, 95);
-  padding: 10px 10px;
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  justify-content: flex-start;
 }
 
 .checkbox {
-  margin-right: 10px;
+  margin-left: 10px;
+  color: #7300e6;
 }
 
 .list-item > p {
-  margin: 0;
+  margin-left: 10px;
+  color: #7300e6;
+  text-transform: capitalize;
 }
 
 .index {
-  color: transparent;
+  color: #7300e6;
 }
 
 .icon {
-  color: rgb(182, 0, 173);
-  margin: 0 0 0 auto;
+  margin-left: auto;
+  margin-right: 0;
+  color: #7300e6;
+  transition: all 0.3s ease-in-out;
+  width: 15px;
+  height: auto;
+}
+
+.icon:hover {
+  color: #a64dff;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
 }
 
 .delete-all-task {
   width: 100%;
+  height: 100%;
+  color: #7300e6;
+  background: none;
   border: none;
-  padding: 10px 0;
-  color: rgb(173, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
 
-.list-item.dragging {
-  opacity: 0.5;
-  background-color: rgb(255, 0, 234);
-}
-
-[contenteditable] {
-  outline: 0 solid transparent;
+.delete-all-task:hover {
+  color: white;
+  background: #7300e6;
+  cursor: pointer;
 }
