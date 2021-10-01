@@ -50,3 +50,14 @@ list.innerHTML = arr.map((item) => `<li class='flex-row todo' draggable='true' i
 <input type='text' value='${item.description}' data-index='${item.index}'draggable='false' class='todo-text ${item.completed ? 'completed' : ''}'>
 <i class='fas fa-ellipsis-v dots' data-id='${item.index}'></i>
 </li>`,).join('');
+
+list.addEventListener('dragenter', dragEnter);
+
+  document.querySelectorAll('.todo').forEach((t) => {
+    t.addEventListener('dragstart', dragStart);
+    t.addEventListener('dragend', dragEnd);
+    t.addEventListener('dragenter', dragEnter);
+    t.addEventListener('dragleave', dragLeave);
+    t.addEventListener('drop', drop);
+    t.addEventListener('dragover', allowDrop);
+});
