@@ -16,3 +16,5 @@ import {
   dragEnter,
   dragLeave,
 } from './dragDrop.js';
+
+import updateStatus from './status.js';
