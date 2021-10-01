@@ -1,7 +1,7 @@
 
 import './style.css';
 
-import dragAndDrop from './dragAndDrop.js';
+import dragAndDrop from './dragDrop.js';
 import statusUpdate from './statusUpdate.js';
 
 class TaskList {
