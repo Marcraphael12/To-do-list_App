@@ -7,6 +7,8 @@ This project is a simple to do app that allows you to be organized with your day
 ![](./images/screeshot.png)
 
 
+- See live version [here](https://marcraphael12.github.io/To-do-list_App/dist/)
+
 ## Built With
 
 - Major languages : HTML/CSS, JavaScript;
